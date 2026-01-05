@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Tracy Only ❤</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family:'Segoe UI', cursive;
+  background: linear-gradient(135deg,#ff758c,#ff7eb3);
+  color:white;
+  overflow:hidden;
+}
+
+.hidden{display:none;}
+
+.container{
+  padding:25px;
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+}
+
+h1{
+  font-size:2.6em;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+  from{text-shadow:0 0 10px #fff;}
+  to{text-shadow:0 0 35px #ffeb3b;}
+}
+
+input{
+  padding:15px;
+  border-radius:30px;
+  border:none;
+  font-size:1.1em;
+  text-align:center;
+}
+
+button{
+  padding:14px 26px;
+  font-size:1.1em;
+  border:none;
+  border-radius:30px;
+  background:#ffeb3b;
+  color:#ff4081;
+  cursor:pointer;
+  margin:10px;
+}
+
+.note{
+  display:none;
+  margin-top:25px;
+  background:rgba(255,255,255,0.15);
+  border-radius:20px;
+  padding:25px;
+  font-size:1.15em;
+  line-height:1.7;
+}
+
+.counter{
+  display:none;
+  margin-top:20px;
+  font-size:1.2em;
+  background:rgba(0,0,0,0.25);
+  padding:15px;
+  border-radius:20px;
+}
+
+.gallery{
+  display:none;
+  margin-top:20px;
+  gap:15px;
+}
+
+.gallery img{
+  width:45%;
+  border-radius:20px;
+  box-shadow:0 0 20px rgba(255,255,255,0.7);
+}
+
+/* Floating hearts */
+.heart{
+  position:absolute;
+  font-size:20px;
+  animation:float 6s linear infinite;
+}
+
+@keyframes float{
+  0%{transform:translateY(0);opacity:1;}
+  100%{transform:translateY(-100vh);opacity:0;}
+}
+
+/* Popup */
+#popup{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.85);
+  align-items:center;
+  justify-content:center;
+}
+
+.popup-content{
+  background:#ff7eb3;
+  padding:30px;
+  border-radius:25px;
+  text-align:center;
+  font-size:1.4em;
+  animation: glow 2s infinite alternate;
+}
+
+/* Watermark */
+.watermark{
+  position:fixed;
+  bottom:15px;
+  right:20px;
+  font-size:1.1em;
+  color:rgba(255,255,255,0.4);
+  transform:rotate(-10deg);
+  pointer-events:none;
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- PASSWORD SCREEN -->
+<div class="container" id="lock">
+  <h1>For My Mamaa Only 🫶❤</h1>
+  <p>Enter the magic word 🫣</p>
+  <input id="password" type="password" placeholder="Password">
+  <br>
+  <button onclick="unlock()">Unlock My Heart 🔐</button>
+  <p id="error"></p>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container hidden" id="content">
+  <h1>Happy 5th Month Anniversary Tracy ❤🫶</h1>
+
+  <button id="startBtn">Click For Loveeee 🫶🔥</button>
+
+  <div class="note" id="note">
+    <div id="typedText"></div>
+  </div>
+
+  <div class="counter" id="counter"></div>
+
+  <div class="gallery" id="gallery">
+    <img src="tracy1.jpg">
+    <img src="tracy2.jpg">
+  </div>
+
+  <audio id="voice">
+    <source src="voice.mp3" type="audio/mpeg">
+  </audio>
+
+  <button class="hidden" id="voiceBtn" onclick="voice.play()">🎙 Hear My Voice</button>
+  <button class="hidden" id="foreverBtn" onclick="alert('She said YES already 😘💍❤')">
+    💍 Will You Be Mine Forever?
+  </button>
+</div>
+
+<!-- Tattoo – Loreen -->
+<iframe width="0" height="0"
+src="https://www.youtube.com/embed/BE2Fj0W4jP4?autoplay=1&loop=1&playlist=BE2Fj0W4jP4"
+allow="autoplay"></iframe>
+
+<!-- POPUP -->
+<div id="popup">
+  <div class="popup-content">
+    Tracy… 🥹❤<br><br>
+    I choose you.<br>
+    Today. Tomorrow. Always. 🫶🔥<br><br>
+    I looooveee youuu endlessly 😘😘😘
+  </div>
+</div>
+
+<div class="watermark">Mamaa Only 🫶❤</div>
+
+<script>
+function unlock(){
+  const pass=document.getElementById("password").value;
+  if(pass==="Mamaa"){
+    document.getElementById("lock").style.display="none";
+    document.getElementById("content").classList.remove("hidden");
+  }else{
+    document.getElementById("error").innerText="Wrong password baby 🫣❤";
+  }
+}
+
+const message = `
+Baaabyyy, as I sit here thinking about us on our 5th month anniversary, my heart is literally overflowing with so much emotion that it can barely pump blood 😘❤😊🤗🫣🥹. Five months might sound like a small number to some, but to me, it’s 150 days of realizing that I never want to live a single second without you by my side my everything 😫❤️🔥🫶🤞. From the very first moment I saw you, I knew there was something different about you, something that I had been searching for my whole life mi amor 🥹😘❤😊. You are the piece of me I didn't know was missing, and now that I have you, I am never, ever letting go I looveee youuu so much it's craazyy sometimes 😫❤️🔥🙌🎊  
+
+You have no idea how much you’ve changed my world for the better mi reina 👑❤️😘🤗. You brought color into a life that was black and white Mamaa you brought music into my silence my cute little soul 🥹✨❤️🤞. Every time I think lf you baabee, I see my whole future staring back at me, and it’s the most beautiful thing I’ve ever seen mi corazon 😘❤😊🤗🫣🥹😁. You are my safe haven, my peace, and my greatest adventure all wrapped into one perfect person cutieee piee 🫶🔥🤭👌😇. I find myself smiling at my phone like a total idiot every time your text or call pops up and I wouldn't have it any other way I loooovveeee youuuu more than words can ever explain totoo 😂🙌😘❤😊  
+
+Baaabyyy girl, I want to thank you for being the most incredible partner I could ever dream of having my shawtyy 🤞❤️🔥🎊🎉. Thank you for the way you laugh at my jokes, the way you care for me when I’m down and the way you love me so unconditionally even when I don't feel like I deserve it mi chiquita 😫❤️🥹🫣🤭. You are the strongest, most beautiful girl I know, both inside and out, and being able to call you my girl is the greatest honor of my entire life I looveee youuu to the moon and back a million times over 😘❤😊🤗🫣🥹😁🙌🫶🔥 (finally nimesema statement ya to the moon and back😂😂).  
+
+I promise to always be your biggest fan and your strongest protector soulmate 🤞❤️🔥. I promise to hold your hand through every storm and to celebrate every victory with you as if it were my own mi amante 🎊🎉🫶🔥🤭. I want to know every part of your soul, to learn every dream you’ve ever had, and to help you make them all come true my sweet honey because you deserve the entire universe and so much more I looveee youuu forever and always my everything 🥹❤️😫🙌👌😇  
+
+Happy 5th Month Anniversary to the woman who owns my heart and soul mi amor 😘❤😊🤗🫣🥹😁🙌😂😫🎊🎉🫶🔥🤭👌😇🤞. These past five months have been the best five months of my life and I am so incredibly excited for the thousands of months we have left to spend together baaabyyy. You are my forever, my always and my greatest blessing I looooveeee youuuu endlessly totoo 🥹❤️🔥🫶🤞
+`;
+
+let i=0;
+function typeWriter(){
+  if(i<message.length){
+    typedText.innerHTML+=message.charAt(i);
+    i++;
+    setTimeout(typeWriter,35);
+  }else{
+    counter.style.display="block";
+    gallery.style.display="flex";
+    voiceBtn.classList.remove("hidden");
+    foreverBtn.classList.remove("hidden");
+    setTimeout(()=>popup.style.display="flex",3000);
+  }
+}
+
+startBtn.onclick=()=>{
+  note.style.display="block";
+  typeWriter();
+  startBtn.style.display="none";
+};
+
+// Monthly auto-update (from 6 Aug 2025)
+const startDate=new Date(2025,7,6);
+function updateCounter(){
+  const now=new Date();
+  let months=(now.getFullYear()-startDate.getFullYear())*12+(now.getMonth()-startDate.getMonth());
+  if(now.getDate()<6) months--;
+  const last=new Date(startDate);
+  last.setMonth(startDate.getMonth()+months);
+  const days=Math.floor((now-last)/(1000*60*60*24));
+  counter.innerHTML=`⏳ Together for <strong>${months} months ${days} days</strong> ❤`;
+}
+updateCounter();
+
+// Floating hearts
+setInterval(()=>{
+  const h=document.createElement("div");
+  h.className="heart";
+  h.innerHTML="❤";
+  h.style.left=Math.random()*100+"vw";
+  h.style.fontSize=(Math.random()*20+15)+"px";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),6000);
+},300);
+</script>
+
+</body>
+</html>
