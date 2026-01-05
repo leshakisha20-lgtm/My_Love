@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy 5th Month Anniversary My Love</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family:'Segoe UI', cursive;
+  background: linear-gradient(135deg,#ff758c,#ff7eb3);
+  color:white;
+  overflow:hidden;
+}
+
+.container{
+  padding:25px;
+  max-width:850px;
+  margin:auto;
+  text-align:center;
+}
+
+h1{
+  font-size:2.6em;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+  from{text-shadow:0 0 10px #fff;}
+  to{text-shadow:0 0 25px #ffeb3b;}
+}
+
+#startBtn{
+  padding:15px 30px;
+  font-size:1.2em;
+  border:none;
+  border-radius:30px;
+  background:#ffeb3b;
+  color:#ff4081;
+  cursor:pointer;
+  margin-top:20px;
+}
+
+.note{
+  display:none;
+  margin-top:25px;
+  background:rgba(255,255,255,0.15);
+  border-radius:20px;
+  padding:25px;
+  font-size:1.15em;
+  line-height:1.7;
+}
+
+strong{color:#ffeb3b;}
+
+.footer{
+  margin-top:20px;
+  font-size:1em;
+}
+
+/* Floating hearts */
+.heart{
+  position:absolute;
+  color:#fff;
+  font-size:20px;
+  animation:float 6s linear infinite;
+}
+
+@keyframes float{
+  0%{transform:translateY(0);opacity:1;}
+  100%{transform:translateY(-100vh);opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Happy 5th Month Anniversary My Love 🎉❤</h1>
+  <p>Tap the button my baabyyy 😘🫣</p>
+  <button id="startBtn">Click For Loveeee 🫶🔥</button>
+
+  <div class="note" id="note">
+    <div id="typedText"></div>
+  </div>
+
+  <div class="footer">
+    Made with looooveee 😘❤🫶🔥
+  </div>
+</div>
+
+<!-- Background music -->
+<audio id="music" loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_7c7fbc1fa3.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const message = `
+My baabyyy… my baaabyyy girl… my mamaa… my totoo… my sweet honey… my cutieee piee 😘❤🤗😊🥹  
+
+Today marks FIVE beautiful months of us 🎊🎉  
+And my heart still chooses YOU every single day 😫🙌🔥  
+
+I loooveee youuu more than words can ever explain 🫣🥹  
+You are my cute little soul, my soulmate, my shawtyy, my girl, my everything 😘❤  
+
+Mamaa, you make my heart melt 😫🔥  
+You make me smile like a fool 🤭😁  
+You are my peace, my joy, my happiness 😊🙌  
+
+Mi amor, mi reina, mi corazon 😇🤞  
+I am so deeply, madly, endlessly in looooveee with you 😘😘😘❤🤗🥹  
+
+You are my mi amante, my forever, my always, my home 🫶🔥  
+Happy 5th month anniversary my baabyyy girl 😘❤🎉  
+
+Forever yours,  
+Your man who looooveee youuu endlessly ❤❤❤
+`;
+
+let i = 0;
+function typeWriter(){
+  if(i < message.length){
+    document.getElementById("typedText").innerHTML += message.charAt(i);
+    i++;
+    setTimeout(typeWriter, 40);
+  }
+}
+
+document.getElementById("startBtn").onclick = function(){
+  document.getElementById("note").style.display="block";
+  document.getElementById("music").play();
+  typeWriter();
+  this.style.display="none";
+};
+
+// Floating hearts generator
+setInterval(()=>{
+  const heart=document.createElement("div");
+  heart.className="heart";
+  heart.innerHTML="❤";
+  heart.style.left=Math.random()*100+"vw";
+  heart.style.fontSize=(Math.random()*20+15)+"px";
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),6000);
+},300);
+</script>
+
+</body>
+</html>
+
