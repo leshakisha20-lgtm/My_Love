@@ -11,7 +11,7 @@ body{
   font-family:'Segoe UI', cursive;
   background: linear-gradient(135deg,#ff758c,#ff7eb3);
   color:white;
-  overflow-y:auto; /* ALLOWS SCROLLING */
+  overflow:hidden;
 }
 
 .hidden{display:none;}
@@ -59,7 +59,7 @@ button{
   border-radius:20px;
   padding:25px;
   font-size:1.15em;
-  line-height:1.8;
+  line-height:1.7;
 }
 
 .counter{
@@ -85,15 +85,14 @@ button{
 
 /* Floating hearts */
 .heart{
-  position:fixed;
+  position:absolute;
   font-size:20px;
   animation:float 6s linear infinite;
-  pointer-events:none;
 }
 
 @keyframes float{
-  0%{transform:translateY(100vh);opacity:1;}
-  100%{transform:translateY(-10vh);opacity:0;}
+  0%{transform:translateY(0);opacity:1;}
+  100%{transform:translateY(-100vh);opacity:0;}
 }
 
 /* Popup */
@@ -104,7 +103,6 @@ button{
   background:rgba(0,0,0,0.85);
   align-items:center;
   justify-content:center;
-  z-index:10;
 }
 
 .popup-content{
@@ -169,11 +167,10 @@ button{
   </button>
 </div>
 
-<!-- Tattoo – Loreen (LYRICS VIDEO) -->
+<!-- Tattoo – Loreen -->
 <iframe width="0" height="0"
-src="https://www.youtube.com/embed/q0xDBo4d2a8?autoplay=1&loop=1&playlist=q0xDBo4d2a8"
-allow="autoplay">
-</iframe>
+src="https://www.youtube.com/embed/BE2Fj0W4jP4?autoplay=1&loop=1&playlist=BE2Fj0W4jP4"
+allow="autoplay"></iframe>
 
 <!-- POPUP -->
 <div id="popup">
@@ -203,7 +200,7 @@ Baaabyyy, as I sit here thinking about us on our 5th month anniversary, my heart
 
 You have no idea how much you’ve changed my world for the better mi reina 👑❤️😘🤗. You brought color into a life that was black and white Mamaa you brought music into my silence my cute little soul 🥹✨❤️🤞. Every time I think lf you baabee, I see my whole future staring back at me, and it’s the most beautiful thing I’ve ever seen mi corazon 😘❤😊🤗🫣🥹😁. You are my safe haven, my peace, and my greatest adventure all wrapped into one perfect person cutieee piee 🫶🔥🤭👌😇. I find myself smiling at my phone like a total idiot every time your text or call pops up and I wouldn't have it any other way I loooovveeee youuuu more than words can ever explain totoo 😂🙌😘❤😊  
 
-Baaabyyy girl, I want to thank you for being the most incredible partner I could ever dream of having my shawtyy 🤞❤️🔥🎊🎉. Thank you for the way you laugh at my jokes, the way you care for me when I’m down and the way you love me so unconditionally even when I don't feel like I deserve it mi chiquita 😫❤️🥹🫣🤭. You are the strongest, most beautiful girl I know, both inside and out, and being able to call you my girl is the greatest honor of my entire life I looveee youuu to the moon and back a million times over 😘❤😊🤗🫣🥹😁🙌🫶🔥  
+Baaabyyy girl, I want to thank you for being the most incredible partner I could ever dream of having my shawtyy 🤞❤️🔥🎊🎉. Thank you for the way you laugh at my jokes, the way you care for me when I’m down and the way you love me so unconditionally even when I don't feel like I deserve it mi chiquita 😫❤️🥹🫣🤭. You are the strongest, most beautiful girl I know, both inside and out, and being able to call you my girl is the greatest honor of my entire life I looveee youuu to the moon and back a million times over 😘❤😊🤗🫣🥹😁🙌🫶🔥 (finally nimesema statement ya to the moon and back😂😂).  
 
 I promise to always be your biggest fan and your strongest protector soulmate 🤞❤️🔥. I promise to hold your hand through every storm and to celebrate every victory with you as if it were my own mi amante 🎊🎉🫶🔥🤭. I want to know every part of your soul, to learn every dream you’ve ever had, and to help you make them all come true my sweet honey because you deserve the entire universe and so much more I looveee youuu forever and always my everything 🥹❤️😫🙌👌😇  
 
@@ -215,5 +212,46 @@ function typeWriter(){
   if(i<message.length){
     typedText.innerHTML+=message.charAt(i);
     i++;
-    setTimeout(typeWriter,30);
+    setTimeout(typeWriter,35);
   }else{
+    counter.style.display="block";
+    gallery.style.display="flex";
+    voiceBtn.classList.remove("hidden");
+    foreverBtn.classList.remove("hidden");
+    setTimeout(()=>popup.style.display="flex",3000);
+  }
+}
+
+startBtn.onclick=()=>{
+  note.style.display="block";
+  typeWriter();
+  startBtn.style.display="none";
+};
+
+// Monthly auto-update (from 6 Aug 2025)
+const startDate=new Date(2025,7,6);
+function updateCounter(){
+  const now=new Date();
+  let months=(now.getFullYear()-startDate.getFullYear())*12+(now.getMonth()-startDate.getMonth());
+  if(now.getDate()<6) months--;
+  const last=new Date(startDate);
+  last.setMonth(startDate.getMonth()+months);
+  const days=Math.floor((now-last)/(1000*60*60*24));
+  counter.innerHTML=`⏳ Together for <strong>${months} months ${days} days</strong> ❤`;
+}
+updateCounter();
+
+// Floating hearts
+setInterval(()=>{
+  const h=document.createElement("div");
+  h.className="heart";
+  h.innerHTML="❤";
+  h.style.left=Math.random()*100+"vw";
+  h.style.fontSize=(Math.random()*20+15)+"px";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),6000);
+},300);
+</script>
+
+</body>
+</html>
