@@ -11,20 +11,21 @@ body{
   font-family:'Segoe UI', cursive;
   background: linear-gradient(135deg,#ff758c,#ff7eb3);
   color:white;
-  overflow:hidden;
+  overflow-y:auto;   /* Allows full scrolling */
+  padding-bottom:50px; /* Spacer at bottom */
 }
 
 .hidden{display:none;}
 
 .container{
-  padding:25px;
+  padding:15px 25px;
   max-width:900px;
   margin:auto;
   text-align:center;
 }
 
 h1{
-  font-size:2.6em;
+  font-size:2.2em; /* Smaller so long text fits */
   animation: glow 2s infinite alternate;
 }
 
@@ -34,65 +35,69 @@ h1{
 }
 
 input{
-  padding:15px;
+  padding:12px;
   border-radius:30px;
   border:none;
-  font-size:1.1em;
+  font-size:1.05em;
   text-align:center;
 }
 
 button{
-  padding:14px 26px;
-  font-size:1.1em;
+  padding:12px 22px;
+  font-size:1.05em;
   border:none;
   border-radius:30px;
   background:#ffeb3b;
   color:#ff4081;
   cursor:pointer;
-  margin:10px;
+  margin:8px;
 }
 
 .note{
   display:none;
-  margin-top:25px;
+  margin-top:20px;
   background:rgba(255,255,255,0.15);
-  border-radius:20px;
-  padding:25px;
-  font-size:1.15em;
+  border-radius:15px;
+  padding:20px;
+  font-size:0.95em;  /* Slightly smaller for readability */
   line-height:1.7;
+  text-align:left;
 }
 
 .counter{
   display:none;
-  margin-top:20px;
-  font-size:1.2em;
+  margin-top:18px;
+  font-size:1.1em;
   background:rgba(0,0,0,0.25);
-  padding:15px;
-  border-radius:20px;
+  padding:12px;
+  border-radius:15px;
+  text-align:center;
 }
 
 .gallery{
   display:none;
   margin-top:20px;
-  gap:15px;
+  gap:10px;
+  justify-content:center;
 }
 
 .gallery img{
   width:45%;
-  border-radius:20px;
+  border-radius:15px;
   box-shadow:0 0 20px rgba(255,255,255,0.7);
 }
 
-/* Floating hearts */
+/* Hearts — NOT fixed to avoid scroll blocking */
 .heart{
   position:absolute;
   font-size:20px;
-  animation:float 6s linear infinite;
+  animation:float 5s linear infinite;
+  pointer-events:none;
 }
 
 @keyframes float{
-  0%{transform:translateY(0);opacity:1;}
-  100%{transform:translateY(-100vh);opacity:0;}
+  0%{transform:translateY(300px);opacity:1;}
+  100%{transform:translateY(-50px);opacity:0;}
 }
 
 /* Popup */
@@ -103,23 +108,24 @@ button{
   background:rgba(0,0,0,0.85);
   align-items:center;
   justify-content:center;
+  z-index:10;
 }
 
 .popup-content{
   background:#ff7eb3;
-  padding:30px;
+  padding:25px;
   border-radius:25px;
   text-align:center;
-  font-size:1.4em;
+  font-size:1.3em;
   animation: glow 2s infinite alternate;
 }
 
 /* Watermark */
 .watermark{
   position:fixed;
-  bottom:15px;
-  right:20px;
-  font-size:1.1em;
+  bottom:10px;
+  right:15px;
+  font-size:1em;
   color:rgba(255,255,255,0.4);
   transform:rotate(-10deg);
   pointer-events:none;
@@ -167,9 +173,9 @@ button{
   </button>
 </div>
 
-<!-- Tattoo – Loreen -->
+<!-- Tattoo — YouTube LYRICAL VIDEO YOU PROVIDED -->
 <iframe width="0" height="0"
-src="https://www.youtube.com/embed/BE2Fj0W4jP4?autoplay=1&loop=1&playlist=BE2Fj0W4jP4"
+src="https://www.youtube.com/embed/_IqI2bf9CCQ?autoplay=1&loop=1&playlist=_IqI2bf9CCQ"
 allow="autoplay"></iframe>
 
 <!-- POPUP -->
@@ -190,7 +196,7 @@ function unlock(){
   if(pass==="Mamaa"){
     document.getElementById("lock").style.display="none";
     document.getElementById("content").classList.remove("hidden");
-  }else{
+  } else {
     document.getElementById("error").innerText="Wrong password baby 🫣❤";
   }
 }
@@ -200,7 +206,7 @@ Baaabyyy, as I sit here thinking about us on our 5th month anniversary, my heart
 
 You have no idea how much you’ve changed my world for the better mi reina 👑❤️😘🤗. You brought color into a life that was black and white Mamaa you brought music into my silence my cute little soul 🥹✨❤️🤞. Every time I think lf you baabee, I see my whole future staring back at me, and it’s the most beautiful thing I’ve ever seen mi corazon 😘❤😊🤗🫣🥹😁. You are my safe haven, my peace, and my greatest adventure all wrapped into one perfect person cutieee piee 🫶🔥🤭👌😇. I find myself smiling at my phone like a total idiot every time your text or call pops up and I wouldn't have it any other way I loooovveeee youuuu more than words can ever explain totoo 😂🙌😘❤😊  
 
-Baaabyyy girl, I want to thank you for being the most incredible partner I could ever dream of having my shawtyy 🤞❤️🔥🎊🎉. Thank you for the way you laugh at my jokes, the way you care for me when I’m down and the way you love me so unconditionally even when I don't feel like I deserve it mi chiquita 😫❤️🥹🫣🤭. You are the strongest, most beautiful girl I know, both inside and out, and being able to call you my girl is the greatest honor of my entire life I looveee youuu to the moon and back a million times over 😘❤😊🤗🫣🥹😁🙌🫶🔥 (finally nimesema statement ya to the moon and back😂😂).  
+Baaabyyy girl, I want to thank you for being the most incredible partner I could ever dream of having my shawtyy 🤞❤️🔥🎊🎉. Thank you for the way you laugh at my jokes, the way you care for me when I’m down and the way you love me so unconditionally even when I don't feel like I deserve it mi chiquita 😫❤️🥹🫣🤭. You are the strongest, most beautiful girl I know, both inside and out, and being able to call you my girl is the greatest honor of my entire life I looveee youuu to the moon and back a million times over 😘❤😊🤗🫣🥹😁🙌🫶🔥  
 
 I promise to always be your biggest fan and your strongest protector soulmate 🤞❤️🔥. I promise to hold your hand through every storm and to celebrate every victory with you as if it were my own mi amante 🎊🎉🫶🔥🤭. I want to know every part of your soul, to learn every dream you’ve ever had, and to help you make them all come true my sweet honey because you deserve the entire universe and so much more I looveee youuu forever and always my everything 🥹❤️😫🙌👌😇  
 
@@ -210,10 +216,10 @@ Happy 5th Month Anniversary to the woman who owns my heart and soul mi amor 😘
 let i=0;
 function typeWriter(){
   if(i<message.length){
-    typedText.innerHTML+=message.charAt(i);
+    typedText.innerHTML += message.charAt(i);
     i++;
-    setTimeout(typeWriter,35);
-  }else{
+    setTimeout(typeWriter,28);
+  } else {
     counter.style.display="block";
     gallery.style.display="flex";
     voiceBtn.classList.remove("hidden");
@@ -222,17 +228,16 @@ function typeWriter(){
   }
 }
 
-startBtn.onclick=()=>{
+startBtn.onclick = ()=>{
   note.style.display="block";
   typeWriter();
   startBtn.style.display="none";
 };
 
-// Monthly auto-update (from 6 Aug 2025)
 const startDate=new Date(2025,7,6);
 function updateCounter(){
   const now=new Date();
-  let months=(now.getFullYear()-startDate.getFullYear())*12+(now.getMonth()-startDate.getMonth());
+  let months=(now.getFullYear()-startDate.getFullYear())*12 + (now.getMonth()-startDate.getMonth());
   if(now.getDate()<6) months--;
   const last=new Date(startDate);
   last.setMonth(startDate.getMonth()+months);
@@ -241,7 +246,6 @@ function updateCounter(){
 }
 updateCounter();
 
-// Floating hearts
 setInterval(()=>{
   const h=document.createElement("div");
   h.className="heart";
@@ -249,8 +253,9 @@ setInterval(()=>{
   h.style.left=Math.random()*100+"vw";
   h.style.fontSize=(Math.random()*20+15)+"px";
   document.body.appendChild(h);
-  setTimeout(()=>h.remove(),6000);
-},300);
+  setTimeout(()=>h.remove(),5000);
+},400);
+
 </script>
 
 </body>
